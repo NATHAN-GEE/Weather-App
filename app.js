@@ -1,7 +1,7 @@
 //------------------Setting API to handle Search Function----------------------------------------
 
 const baseURL =
-  "http://api.weatherstack.com/current?access_key=e4290216241b86108ea6f402b1840ef5&query=Indiana";
+  "https://api.weatherstack.com/current?access_key=e4290216241b86108ea6f402b1840ef5&query=Indiana";
 
 //-----------------Function to reset the DOM elements and get New location----------------------
 
@@ -12,7 +12,7 @@ let searchURL = function () {
   document.querySelector(".information").innerHTML = "";
   document.querySelector(".icon").innerHTML = "";
   fetch(
-    `http://api.weatherstack.com/current?access_key=e4290216241b86108ea6f402b1840ef5&query=${newURL}`
+    `https://api.weatherstack.com/current?access_key=e4290216241b86108ea6f402b1840ef5&query=${newURL}`
   )
     .then((Response) => {
       return Response.json();
@@ -55,7 +55,6 @@ function fetchLocation() {
     });
 }
 fetchLocation();
-
 
 //---------Create the get data from API--------------------------
 let weather = document.querySelector(".weather");
